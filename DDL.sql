@@ -1,4 +1,7 @@
 
+-- -----------------------------------------------------
+-- Schema Veterinaria Nala
+-- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `Veterinaria Nala` ;
 USE `Veterinaria Nala` ;
 
@@ -41,6 +44,7 @@ CREATE TABLE IF NOT EXISTS `Veterinaria Nala`.`Visitas` (
     ON UPDATE NO ACTION)
 
 
+
 -- -----------------------------------------------------
 -- Table `Veterinaria Nala`.`Mascotas`
 -- -----------------------------------------------------
@@ -70,29 +74,6 @@ CREATE TABLE IF NOT EXISTS `Veterinaria Nala`.`Mascotas` (
 
 
 -- -----------------------------------------------------
--- Table `Veterinaria Nala`.`Mascotas_has_Servicio`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Veterinaria Nala`.`Mascotas_has_Servicio` (
-  `Mascotas_idMascotas` INT NOT NULL,
-  `Mascotas_Dueños_idDUeños` INT NOT NULL,
-  `Servicio_idServicio` INT NOT NULL,
-  PRIMARY KEY (`Mascotas_idMascotas`, `Mascotas_Dueños_idDUeños`, `Servicio_idServicio`),
-  INDEX `fk_Mascotas_has_Servicio_Servicio1_idx` (`Servicio_idServicio` ASC) VISIBLE,
-  INDEX `fk_Mascotas_has_Servicio_Mascotas1_idx` (`Mascotas_idMascotas` ASC, `Mascotas_Dueños_idDUeños` ASC) VISIBLE,
-  CONSTRAINT `fk_Mascotas_has_Servicio_Mascotas1`
-    FOREIGN KEY (`Mascotas_idMascotas` , `Mascotas_Dueños_idDUeños`)
-    REFERENCES `Veterinaria Nala`.`Mascotas` (`idMascotas` , `Dueños_idDUeños`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Mascotas_has_Servicio_Servicio1`
-    FOREIGN KEY (`Servicio_idServicio`)
-    REFERENCES `Veterinaria Nala`.`Servicio` (`idServicio`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-
-
-
--- -----------------------------------------------------
 -- Table `Veterinaria Nala`.`Tratamientos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Veterinaria Nala`.`Tratamientos` (
@@ -103,6 +84,21 @@ CREATE TABLE IF NOT EXISTS `Veterinaria Nala`.`Tratamientos` (
   PRIMARY KEY (`idTratamientos`),
   INDEX `fk_Tratamientos_Visitas1_idx` (`Visitas_idVisitas` ASC) VISIBLE,
   CONSTRAINT `fk_Tratamientos_Visitas1`
+    FOREIGN KEY (`Visitas_idVisitas`)
+    REFERENCES `Veterinaria Nala`.`Visitas` (`idVisitas`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+
+
+-- -----------------------------------------------------
+-- Table `Veterinaria Nala`.`Historial`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Veterinaria Nala`.`Historial` (
+  `idHistorial` INT NOT NULL AUTO_INCREMENT,
+  `Visitas_idVisitas` INT NOT NULL,
+  PRIMARY KEY (`idHistorial`),
+  INDEX `fk_Historial_Visitas1_idx` (`Visitas_idVisitas` ASC) VISIBLE,
+  CONSTRAINT `fk_Historial_Visitas1`
     FOREIGN KEY (`Visitas_idVisitas`)
     REFERENCES `Veterinaria Nala`.`Visitas` (`idVisitas`)
     ON DELETE NO ACTION
