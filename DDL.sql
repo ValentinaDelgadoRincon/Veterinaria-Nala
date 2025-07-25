@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `Veterinaria Nala`.`Duenios` (
   `nombre` VARCHAR(45) NOT NULL,
   `telefono` VARCHAR(45) NOT NULL,
   `direccion` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idDueños`))
+  PRIMARY KEY (`idDueños`));
 
 
 -- -----------------------------------------------------
@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `Veterinaria Nala`.`Servicio` (
   `nombre` VARCHAR(45) NOT NULL,
   `descripcion` VARCHAR(200) NOT NULL,
   `precio` INT NOT NULL,
-  PRIMARY KEY (`idServicio`))
+  PRIMARY KEY (`idServicio`));
 
 
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `Veterinaria Nala`.`Visitas` (
     FOREIGN KEY (`Servicio_idServicio`)
     REFERENCES `Veterinaria Nala`.`Servicio` (`idServicio`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
 
 
 
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `Veterinaria Nala`.`Mascotas` (
     FOREIGN KEY (`Visitas_idVisitas`)
     REFERENCES `Veterinaria Nala`.`Visitas` (`idVisitas`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
 
 
 -- -----------------------------------------------------
@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `Veterinaria Nala`.`Tratamientos` (
     FOREIGN KEY (`Visitas_idVisitas`)
     REFERENCES `Veterinaria Nala`.`Visitas` (`idVisitas`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
 
 
 -- -----------------------------------------------------
@@ -102,4 +102,4 @@ CREATE TABLE IF NOT EXISTS `Veterinaria Nala`.`Historial` (
     FOREIGN KEY (`Visitas_idVisitas`)
     REFERENCES `Veterinaria Nala`.`Visitas` (`idVisitas`)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON UPDATE NO ACTION);
