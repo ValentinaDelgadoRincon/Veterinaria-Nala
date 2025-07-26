@@ -7,3 +7,8 @@ GROUP BY d.idDueños, d.nombre;
 SELECT CONCAT(D.nombre,' - ', E.especie) AS 'Dueños y mascotas' 
 FROM Duenios D 
 JOIN Mascotas E ON D.idDueños = E.Dueños_idDUeños;
+
+CREATE TABLE gatos AS 
+SELECT nombre
+FROM Mascotas WHERE especie ='gato';
+
