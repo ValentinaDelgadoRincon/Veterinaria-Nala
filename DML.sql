@@ -14,7 +14,7 @@ INSERT INTO Mascotas (nombre,especie,raza,edad,sexo,vacunas,Dueños_idDUeños,Vi
 ("Tomas","gato","siames",12,"macho",TRUE,4,2),
 ("Odi","erizo","albino",4,"macho",FALSE,2,1),
 ("Linda","perro","golden",4,"hembra",TRUE,1,3),
-("Casimiro","gato","ocicat",8,"macho",TRUE,3,4),
+("Casimiro","gato","ocicat",8,"macho",TRUE,5,4),
 ("Nucita","gato","bombay",6,"hembra",TRUE,2,7),
 ("Gus Gus","hamster","sirio",15,"macho",FALSE,4,6),
 ("Romina","perro","doberman",2,"hembra",FALSE,1,9),
