@@ -4,7 +4,10 @@ INSERT INTO Duenios (nombre,telefono,direccion) VALUES
 ("Emely Rojas","3221485255","Av.17 #17"),
 ("Vanesa Diaz","3419564100","Calle 20 #20"),
 ("Sara Martinez","3185410927","Cra.8 #8"),
-("David Perez","3183098322","Av.15 #15");
+("David Perez","3183098322","Av.15 #15"),
+("Juan Gomez","3214567890","Calle 30 #30");
+
+
 
 INSERT INTO Mascotas (nombre,especie,raza,edad,sexo,vacunas,Dueños_idDUeños,Visitas_idVisitas) VALUES
 ("Noha","perro","french poodle",5,"macho",FALSE,1,5),
