@@ -12,3 +12,5 @@ CREATE TABLE gatos AS
 SELECT nombre
 FROM Mascotas WHERE especie ='gato';
 
+SELECT edad,IF (edad > 8,'Adulto','Joven') AS `Rango edad` FROM `Mascotas`;
+
