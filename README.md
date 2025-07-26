@@ -74,7 +74,7 @@ Contiene **mínimo 15 consultas** que aplican lo siguiente:
 - ✅ `CONCAT`
 - ✅ Funciones de texto: `UPPER`, `LOWER`, `LENGTH`, `SUBSTRING`, `TRIM`
 - ✅ `ROUND`
-- ✅ Uso de `IF` en campos *(consultado e implementado)*
+- ✅ Uso de `IF` en campos 
 - ✅ Opcionales: `JOIN`, `ORDER BY`, `GROUP BY`, entre otras
 
 
@@ -82,7 +82,7 @@ Contiene **mínimo 15 consultas** que aplican lo siguiente:
 
 ## 🎥 Video de Explicación
 
-🔗 [Ver video explicativo aquí](/multimedia/Video_explicacion_mySQL.mp4)
+🔗 [Ver video explicativo aquí](https://drive.google.com/file/d/1IknJRJyauVGA7R5bbH9uh4N8t3LMQecw/view?usp=drivesdk)
 
 En este video se explica detalladamente el funcionamiento de las consultas SQL implementadas en `consultas.sql`.
 
