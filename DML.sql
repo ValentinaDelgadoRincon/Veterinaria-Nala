@@ -9,7 +9,7 @@ INSERT INTO Duenios (nombre,telefono,direccion) VALUES
 
 
 
-INSERT INTO Mascotas (nombre,especie,raza,edad,sexo,vacunas,Dueños_idDUeños,Visitas_idVisitas) VALUES
+INSERT INTO Mascotas (nombre,especie,raza,edad,sexo,vacunas,Duenios_idDuenios,Visitas_idVisitas) VALUES
 ("Noha","perro","french poodle",5,"macho",FALSE,1,5),
 ("Tomas","gato","siames",12,"macho",TRUE,4,2),
 ("Odi","erizo","albino",4,"macho",FALSE,2,1),

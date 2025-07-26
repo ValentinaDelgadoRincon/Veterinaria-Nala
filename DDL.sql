@@ -9,7 +9,7 @@ USE `Veterinaria Nala` ;
 -- Table `Veterinaria Nala`.`Duenios`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Duenios` (
-  `idDueños` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `idDuenios` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `nombre` VARCHAR(45) NOT NULL,
   `telefono` VARCHAR(45) NOT NULL,
   `direccion` VARCHAR(45) NOT NULL);
@@ -48,9 +48,9 @@ CREATE TABLE IF NOT EXISTS `Mascotas` (
   `edad` INT NOT NULL,
   `sexo` VARCHAR(45) NOT NULL,
   `vacunas` TINYINT NOT NULL,
-  `Dueños_idDUeños` INT NOT NULL,
+  `Duenios_idDuenios` INT NOT NULL,
   `Visitas_idVisitas` INT NOT NULL,
-    FOREIGN KEY (`Dueños_idDUeños`)REFERENCES `Veterinaria Nala`.`Duenios` (`idDueños`),
+    FOREIGN KEY (`Duenios_idDuenios`)REFERENCES `Veterinaria Nala`.`Duenios` (`idDuenios`),
     FOREIGN KEY (`Visitas_idVisitas`)REFERENCES `Veterinaria Nala`.`Visitas` (`idVisitas`));
 
 
