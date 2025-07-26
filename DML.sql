@@ -3,23 +3,9 @@ USE `Veterinaria Nala`;
 INSERT INTO Duenios (nombre,telefono,direccion) VALUES
 ("Emely Rojas","3221485255","Av.17 #17"),
 ("Vanesa Diaz","3419564100","Calle 20 #20"),
-("Sara Martinez","3185410927","Cra.8 #8"),
+("Sara Martinez","318541092","Cra.8 #8"),
 ("David Perez","3183098322","Av.15 #15"),
-("Juan Gomez","3214567890","Calle 30 #30");
-
-
-
-INSERT INTO Mascotas (nombre,especie,raza,edad,sexo,vacunas,Duenios_idDuenios,Visitas_idVisitas) VALUES
-("Noha","perro","french poodle",5,"macho",FALSE,1,5),
-("Tomas","gato","siames",12,"macho",TRUE,4,2),
-("Odi","erizo","albino",4,"macho",FALSE,2,1),
-("Linda","perro","golden",4,"hembra",TRUE,1,3),
-("Casimiro","gato","ocicat",8,"macho",TRUE,5,4),
-("Nucita","gato","bombay",6,"hembra",TRUE,2,7),
-("Gus Gus","hamster","sirio",15,"macho",FALSE,4,6),
-("Romina","perro","doberman",2,"hembra",FALSE,1,9),
-("Shaina","tortuga","verde",9,"hembra",FALSE,3,10),
-("Tuttis","conejo","holandes",6,"macho",TRUE,2,8);
+("Juan Gomez","32145678904","Calle 30 #30");
 
 INSERT INTO Servicio (nombre,descripcion,precio) VALUES
 ("Baño","Se realiza un baño completo con jabones y shampoos adecuados para cada mascota", 45000),
@@ -40,9 +26,33 @@ INSERT INTO Visitas (Servicio_idServicio,fecha) VALUES
 (1,'2025-08-15 15:30'),
 (5,'2025-08-18 07:00');
 
+INSERT INTO Mascotas (nombre,especie,raza,edad,sexo,vacunas,Duenios_idDuenios,Visitas_idVisitas) VALUES
+("Noha","perro","french poodle",5,"macho",FALSE,1,5),
+("Tomas","gato","siames",12,"macho",TRUE,4,2),
+("Odi","erizo","albino",4,"macho",FALSE,2,1),
+("Linda","perro","golden",4,"hembra",TRUE,1,3),
+("Casimiro","gato","ocicat",8,"macho",TRUE,5,4),
+("Nucita","gato","bombay",6,"hembra",TRUE,2,7),
+("Gus Gus","hamster","sirio",15,"macho",FALSE,4,6),
+("Romina","perro","doberman",2,"hembra",FALSE,1,9),
+("Shaina","tortuga","verde",9,"hembra",FALSE,3,10),
+("Tuttis","conejo","holandes",6,"macho",TRUE,2,8);
+
 INSERT INTO Tratamientos(nombre,observaciones,Visitas_idVisitas) VALUES
 ("Cirugia","Se realiza una cirugia si es necesario para la mascota, para mejorar su salud",1),
 ("Odontologia","Se realiza limpieza bucal a cada una de las mascotas para evitar caries",5),
 ("Eutanasia","Se realizara este tratamiento a las mascotas que lo requieran por solicitud de su dueño",2),
 ("Spa","Se realizaran masajes, y diferentes proedimientos para relajar a tu mascota",3),
 ("Oncologia","Se realizara este tratamiento a mascotas que requieran este servicio",4);
+
+INSERT INTO historial(Visitas_idVisitas) VALUES
+(1),
+(2),
+(3),
+(4),
+(5),
+(6),
+(7),
+(8),
+(9),
+(10);
