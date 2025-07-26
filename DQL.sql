@@ -1,5 +1,11 @@
 USE `Veterinaria Nala` ;
+SELECT d.nombre AS "Nombre Dueño",COUNT( mas.Dueños_idDUeños) AS "Cantidad De Mascotas"
+FROM Duenios d
+JOIN mascotas mas ON d.idDueños=mas.Dueños_idDUeños
+GROUP BY d.idDueños, d.nombre;
 
-SELECT CONCAT(D.nombre,' - ', M.especie) AS 'Dueños y mascotas' 
+SELECT CONCAT(D.nombre,' - ', E.especie) AS 'Dueños y mascotas' 
 FROM Duenios D 
-JOIN Mascotas M ON D.idDuenios = M.Duenios_idDuenios;
+JOIN Mascotas E ON D.idDueños = E.Dueños_idDUeños;
+
+CREATE TABLE 
